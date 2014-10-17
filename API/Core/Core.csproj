@@ -1,0 +1,84 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8C177892-1C98-4399-8CA0-97BD83B9BC41}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Core</RootNamespace>
+    <AssemblyName>Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Constants\Constant.cs" />
+    <Compile Include="DomainModel\Master\Company.cs" />
+    <Compile Include="DomainModel\Master\Prospect.cs" />
+    <Compile Include="DomainModel\Master\Agent.cs" />
+    <Compile Include="DomainModel\Master\ProspectAgentMutation.cs" />
+    <Compile Include="DomainModel\Master\ProspectDetail.cs" />
+    <Compile Include="DomainModel\UserRole\UserAccess.cs" />
+    <Compile Include="DomainModel\UserRole\UserAccount.cs" />
+    <Compile Include="DomainModel\UserRole\UserMenu.cs" />
+    <Compile Include="Interface\Repository\IRepository.cs" />
+    <Compile Include="Interface\Repository\Master\IAgentRepository.cs" />
+    <Compile Include="Interface\Repository\Master\IProspectDetailRepository.cs" />
+    <Compile Include="Interface\Repository\Master\IProspectAgentMutationRepository.cs" />
+    <Compile Include="Interface\Repository\Master\IProspectRepository.cs" />
+    <Compile Include="Interface\Repository\UserRole\IUserAccessRepository.cs" />
+    <Compile Include="Interface\Repository\UserRole\IUserAccountRepository.cs" />
+    <Compile Include="Interface\Repository\UserRole\IUserMenuRepository.cs" />
+    <Compile Include="Interface\Service\Master\IAgentService.cs" />
+    <Compile Include="Interface\Service\Master\IProspectAgentMutationService.cs" />
+    <Compile Include="Interface\Service\Master\IProspectDetailService.cs" />
+    <Compile Include="Interface\Service\Master\IProspectService.cs" />
+    <Compile Include="Interface\Service\UserRole\IUserAccessService.cs" />
+    <Compile Include="Interface\Service\UserRole\IUserAccountService.cs" />
+    <Compile Include="Interface\Service\UserRole\IUserMenuService.cs" />
+    <Compile Include="Interface\Validation\Master\IAgentValidator.cs" />
+    <Compile Include="Interface\Validation\Master\IProspectValidator.cs" />
+    <Compile Include="Interface\Validation\Master\IProspectDetailValidator.cs" />
+    <Compile Include="Interface\Validation\Master\IProspectAgentMutationValidator.cs" />
+    <Compile Include="Interface\Validation\UserRole\IUserAccessValidator.cs" />
+    <Compile Include="Interface\Validation\UserRole\IUserAccountValidator.cs" />
+    <Compile Include="Interface\Validation\UserRole\IUserMenuValidator.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
