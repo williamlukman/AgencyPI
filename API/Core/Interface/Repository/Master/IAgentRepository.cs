@@ -10,6 +10,7 @@ namespace Core.Interface.Repository
     {
         IQueryable<Agent> GetQueryable();
         IList<Agent> GetAll();
+        IList<Agent> GetObjectsByDirectLeaderId(int DirectLeaderId);
         Agent GetObjectById(int Id);
         Agent CreateObject(Agent agent);
         Agent UpdateObject(Agent agent);

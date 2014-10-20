@@ -12,7 +12,9 @@ namespace Core.Interface.Repository
         IList<Prospect> GetAll();
         IList<Prospect> GetObjectsByAgentId(int agentId);
         Prospect GetObjectById(int Id);
-        Prospect GetObjectByName(string Name);
+        IList<Prospect> GetObjectsByFirstName(string FirstName);
+        IList<Prospect> GetObjectsByLastName(string LastName);
+        IList<Prospect> GetObjectsByFirstAndLastName(string FirstName, string LastName);
         Prospect CreateObject(Prospect prospect);
         Prospect UpdateObject(Prospect prospect);
         Prospect SoftDeleteObject(Prospect prospect);

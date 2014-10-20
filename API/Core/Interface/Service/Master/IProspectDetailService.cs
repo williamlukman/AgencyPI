@@ -12,16 +12,14 @@ namespace Core.Interface.Service
         IProspectDetailValidator GetValidator();
         IQueryable<ProspectDetail> GetQueryable();
         IList<ProspectDetail> GetAll();
-        IList<ProspectDetail> GetAllByMonthCreated();
         IList<ProspectDetail> GetObjectsByProspectId(int prospectId);
         ProspectDetail GetObjectById(int Id);
-        ProspectDetail CreateObject(ProspectDetail prospectDetail, IProspectService _prospectService);
-        ProspectDetail UpdateObject(ProspectDetail prospectDetail, IProspectService _prospectService);
+        ProspectDetail CreateObject(ProspectDetail prospectDetail, IAgentService _agentService, IProspectService _prospectService);
+        ProspectDetail UpdateObject(ProspectDetail prospectDetail, IAgentService _agentService, IProspectService _prospectService);
         ProspectDetail SoftDeleteObject(ProspectDetail prospectDetail);
-        ProspectDetail ConfirmObject(ProspectDetail prospectDetail);
+        ProspectDetail ConfirmObject(ProspectDetail prospectDetail, DateTime ConfirmationDate, IAgentService _agentService, IProspectService _prospectService);
         ProspectDetail UnconfirmObject(ProspectDetail prospectDetail);
-        ProspectDetail GiveFeedback(ProspectDetail prospectDetail, IProspectService _prospectService);
+        ProspectDetail GiveFeedback(ProspectDetail prospectDetail, IAgentService _agentService, IProspectService _prospectService);
         bool DeleteObject(int Id);
-        string SetObjectCode(string ParentCode);
     }
 }

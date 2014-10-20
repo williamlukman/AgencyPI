@@ -11,6 +11,10 @@ namespace Core.Interface.Repository
         IQueryable<ProspectAgentMutation> GetQueryable();
         IList<ProspectAgentMutation> GetAll();
         IList<ProspectAgentMutation> GetAllByMonthCreated();
+        Agent GetAgent(ProspectAgentMutation prospectAgentMutation);
+        Agent GetRefereeAgent(ProspectAgentMutation prospectAgentMutation);
+        Agent GetDirectLeader(ProspectAgentMutation prospectAgentMutation);
+        IList<ProspectAgentMutation> GetObjectsByProspectId(int prospectId);
         ProspectAgentMutation GetObjectById(int Id);
         ProspectAgentMutation CreateObject(ProspectAgentMutation prospectAgentMutation);
         ProspectAgentMutation UpdateObject(ProspectAgentMutation prospectAgentMutation);
@@ -18,6 +22,5 @@ namespace Core.Interface.Repository
         ProspectAgentMutation ConfirmObject(ProspectAgentMutation prospectAgentMutation);
         ProspectAgentMutation UnconfirmObject(ProspectAgentMutation prospectAgentMutation);
         bool DeleteObject(int Id);
-        string SetObjectCode();
     }
 }

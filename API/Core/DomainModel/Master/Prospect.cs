@@ -25,5 +25,6 @@ namespace Core.DomainModel
 
         public virtual Agent Agent { get; set; }
         public virtual ICollection<ProspectDetail> ProspectDetails { get; set; }
+        public virtual ICollection<ProspectAgentMutation> ProspectAgentMutations { get; set; }
     }
 }

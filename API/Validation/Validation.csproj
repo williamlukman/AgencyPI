@@ -40,6 +40,28 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Validation\Master\CompanyValidator.cs" />
+    <Compile Include="Validation\Master\ProspectValidator.cs" />
+    <Compile Include="Validation\Master\ProspectDetailValidator.cs" />
+    <Compile Include="Validation\Master\ProspectAgentMutationValidator.cs" />
+    <Compile Include="Validation\Master\AgentValidator.cs" />
+    <Compile Include="Validation\UserRole\UserAccessValidator.cs" />
+    <Compile Include="Validation\UserRole\UserAccountValidator.cs" />
+    <Compile Include="Validation\UserRole\UserMenuValidator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{8c177892-1c98-4399-8ca0-97bd83b9bc41}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{cdfde021-fe39-4607-8b21-4b5d38db6fbc}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Service\Service.csproj">
+      <Project>{d1496e95-9158-4105-8d09-c5b18cca5a5e}</Project>
+      <Name>Service</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

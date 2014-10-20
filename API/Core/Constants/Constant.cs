@@ -17,6 +17,12 @@ namespace Core.Constants
             public static string ErrorPageHasNoClosingDate = "No report has been produced for this closing date.";
         }
 
+        public class AgentPosition
+        {
+            public static int BusinessExecutive = 1;
+            public static int BusinessPartner = 2;
+        }
+
         public class ProspectStatus
         {
             public static int Prospect = 1;

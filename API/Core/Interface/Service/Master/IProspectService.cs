@@ -13,11 +13,13 @@ namespace Core.Interface.Service
         IQueryable<Prospect> GetQueryable();
         IList<Prospect> GetAll();
         IList<Prospect> GetObjectsByAgentId(int agentId);
+        IList<Prospect> GetObjectsByFirstName(string FirstName);
+        IList<Prospect> GetObjectsByLastName(string LastName);
+        IList<Prospect> GetObjectsByFirstAndLastName(string FirstName, string LastName);
         Prospect GetObjectById(int Id);
-        Prospect GetObjectByName(string Name);
-        Prospect CreateObject(Prospect prospect);
-        Prospect UpdateObject(Prospect prospect);
-        Prospect SoftDeleteObject(Prospect prospect, IProspectDetailService _prospectDetailService);
+        Prospect CreateObject(Prospect prospect, IAgentService _agentService);
+        Prospect UpdateObject(Prospect prospect, IAgentService _agentService);
+        Prospect SoftDeleteObject(Prospect prospect, IProspectDetailService _prospectDetailService, IProspectAgentMutationService _prospectAgentMutationService);
         bool DeleteObject(int Id);
         bool IsNameDuplicated(Prospect prospect);
     }

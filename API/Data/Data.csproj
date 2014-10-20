@@ -30,8 +30,12 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="EntityFramework">
+      <HintPath>..\..\..\..\lib\EntityFramework.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
+    <Reference Include="System.Data.Entity" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -39,7 +43,32 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Context\APIEntities.cs" />
+    <Compile Include="Mapping\Master\AgentMapping.cs" />
+    <Compile Include="Mapping\Master\ProspectMapping.cs" />
+    <Compile Include="Mapping\Master\ProspectDetailMapping.cs" />
+    <Compile Include="Mapping\Master\ProspectAgentMutationMapping.cs" />
+    <Compile Include="Mapping\Master\CompanyMapping.cs" />
+    <Compile Include="Mapping\UserRole\UserAccessMapping.cs" />
+    <Compile Include="Mapping\UserRole\UserAccountMapping.cs" />
+    <Compile Include="Mapping\UserRole\UserMenuMapping.cs" />
+    <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repository\EfRepository.cs" />
+    <Compile Include="Repository\Master\AgentRepository.cs" />
+    <Compile Include="Repository\Master\CompanyRepository.cs" />
+    <Compile Include="Repository\Master\ProspectRepository.cs" />
+    <Compile Include="Repository\Master\ProspectDetailRepository.cs" />
+    <Compile Include="Repository\Master\ProspectAgentMutationRepository.cs" />
+    <Compile Include="Repository\UserRole\UserAccessRepository.cs" />
+    <Compile Include="Repository\UserRole\UserAccountRepository.cs" />
+    <Compile Include="Repository\UserRole\UserMenuRepository.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{8c177892-1c98-4399-8ca0-97bd83b9bc41}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

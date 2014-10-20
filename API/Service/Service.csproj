@@ -40,6 +40,25 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Service\Master\CompanyService.cs" />
+    <Compile Include="Service\Master\AgentService.cs" />
+    <Compile Include="Service\Master\ProspectDetailService.cs" />
+    <Compile Include="Service\Master\ProspectService.cs" />
+    <Compile Include="Service\Master\ProspectAgentMutationService.cs" />
+    <Compile Include="Service\UserRole\StringEncryption.cs" />
+    <Compile Include="Service\UserRole\UserAccessService.cs" />
+    <Compile Include="Service\UserRole\UserAccountService.cs" />
+    <Compile Include="Service\UserRole\UserMenuService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Core\Core.csproj">
+      <Project>{8c177892-1c98-4399-8ca0-97bd83b9bc41}</Project>
+      <Name>Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Data\Data.csproj">
+      <Project>{cdfde021-fe39-4607-8b21-4b5d38db6fbc}</Project>
+      <Name>Data</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
